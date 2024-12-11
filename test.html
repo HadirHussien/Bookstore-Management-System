@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Web Page</title>
+  <style>
+    /* Reset default margin and padding */
+    body, h1, ul {
+      margin: 0;
+      padding: 0;
+    }
+    
+    /* Header styles */
+    header {
+      background-color: #f8f8f8;
+      padding: 20px;
+      display: flex;
+      align-items: center;
+    }
+    
+    header ul {
+      list-style-type: none;
+      margin-left: auto;
+    }
+    
+    header ul li {
+      display: inline-block;
+      margin-left: 10px;
+    }
+    
+    header ul li a {
+      text-decoration: none;
+      color: #333;
+      padding: 5px;
+    }
+    
+    /* Rectangle styles */
+    .rectangle {
+      background-color: rgba(0, 0, 0, 0.5);
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    
+    /* Sign in and Sign up steps */
+    .steps {
+      text-align: center;
+      margin: 50px auto;
+    }
+    
+    .steps h2 {
+      color: #333;
+      margin-bottom: 20px;
+    }
+    
+    .steps input[type="text"],
+    .steps input[type="password"] {
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+    
+    .steps input[type="submit"] {
+      padding: 10px 20px;
+      background-color: #333;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Login</a></li>
+      <li><a href="#">Signup</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </header>
+  
+  <!-- Rectangular Background -->
+  <div class="rectangle">
+    <h2>Sign In and Sign Up</h2>
+    <form>
+      <input type="text" placeholder="Username"><br>
+      <input type="password" placeholder="Password"><br>
+      <input type="submit" value="Sign In">
+      <input type="submit" value="Sign Up">
+    </form>
+  </div>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<div id="demo">
+<h2>The XMLHttpRequest Object</h2>
+Borrow Date: <input type="date" id="burrowDate" onclick="loadAvailableBooks()" required/><br>
+Return Date: <input type="date" id="returnDate" onclick="loadAvailableBooks()" required/><br>
+Book Name: <select id="bookName" required></select> <br>
+<button type="button" onclick="submitForm()">Submit</button>
+</div>
+
+<script>
+function loadAvailableBooks() {
+  var burrowDate = document.getElementById("burrowDate").value;
+  var returnDate = document.getElementById("returnDate").value;
+  if (burrowDate !== '' && returnDate !== '') {
+    const xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+        document.getElementById("bookName").innerHTML = this.responseText;
+      }
+    };
+    xhttp.open("GET", "fetchAvailableBooks.asp?burrowDate=" + burrowDate + "&returnDate=" + returnDate, true);
+    xhttp.send();
+  }
+}
+
+function submitForm() {
+  // Add your code to submit the form here
+  // You can access the selected values using:
+  // var burrowDate = document.getElementById("burrowDate").value;
+  // var returnDate = document.getElementById("returnDate").value;
+  // var bookName = document.getElementById("bookName").value;
+}
+</script>
+
+</body>
+</html>
